@@ -1,3 +1,4 @@
+using Example_2a_BasicConfiguration.Application;
 using StructureMap.Configuration.DSL;
 
 namespace Example_2a_BasicConfiguration.DependencyResolution
@@ -11,6 +12,10 @@ namespace Example_2a_BasicConfiguration.DependencyResolution
 			     	x.TheCallingAssembly();
 			     	x.WithDefaultConventions();
 			     });
+
+			ForRequestedType<IDatabaseConnection>()
+				.TheDefault.Is.OfConcreteType<OracleDatabaseConnection>()
+				.WithCtorArg("connectionString").EqualTo("Database=oracle_server");
 		}
 	}
 }

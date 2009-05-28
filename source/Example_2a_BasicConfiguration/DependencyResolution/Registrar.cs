@@ -4,7 +4,7 @@ namespace Example_2a_BasicConfiguration.DependencyResolution
 {
 	public class Registrar
 	{
-		private static bool _dependenciesRegistered;
+		static bool _dependenciesRegistered;
 
 		public static void EnsureDependenciesRegistered()
 		{
@@ -12,7 +12,7 @@ namespace Example_2a_BasicConfiguration.DependencyResolution
 				ConfigureStructureMap();
 		}
 
-		private static void ConfigureStructureMap()
+		static void ConfigureStructureMap()
 		{
 			ObjectFactory.Initialize(x =>
 			                         x.AddRegistry<ExampleRegistry>());

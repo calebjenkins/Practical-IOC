@@ -1,7 +1,6 @@
-using Example_2_IOC.DependencyResolution;
 using StructureMap;
 
-namespace Example_1_DependencyInjectionWithoutIOC.DependencyResolution
+namespace Example_2_IOC.DependencyResolution
 {
 	public class ServiceLocator
 	{

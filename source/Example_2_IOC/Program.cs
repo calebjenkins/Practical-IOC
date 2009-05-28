@@ -1,5 +1,5 @@
-using Example_1_DependencyInjectionWithoutIOC.DependencyResolution;
 using Example_2_IOC.Application;
+using Example_2_IOC.DependencyResolution;
 
 namespace Example_2_IOC
 {
