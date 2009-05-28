@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{217DD9E2-4335-408F-8CFB-B3F3F5C3AA67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{712F37DC-290D-4CEB-AB06-AE1D6FB7C692}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stages", "Stages", "{DC628E77-1052-467F-B480-7616A8B22F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_1_DependencyInjectionWithoutIOC", "Example_1_DependencyInjectionWithoutIOC\Example_1_DependencyInjectionWithoutIOC.csproj", "{649F961B-A0D3-4C1C-B38B-B0FD8E97BF33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_2_IOC", "Example_2_IOC\Example_2_IOC.csproj", "{F66AC8F7-45AA-493F-AFB0-D4B317879963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_3_Open_Generics", "Example_3_Open_Generics\Example_3_Open_Generics.csproj", "{F0209BD1-BA7F-4BC8-9EF3-264CE7DC5987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_4_Decorator", "Example_4_Decorator\Example_4_Decorator.csproj", "{B645BED0-E1CA-498C-A795-A03A9747E2FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_5_Collections", "Example_5_Collections\Example_5_Collections.csproj", "{74362C64-6237-4D5A-9CF9-066D53CF8990}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{712F37DC-290D-4CEB-AB06-AE1D6FB7C692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712F37DC-290D-4CEB-AB06-AE1D6FB7C692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712F37DC-290D-4CEB-AB06-AE1D6FB7C692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712F37DC-290D-4CEB-AB06-AE1D6FB7C692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649F961B-A0D3-4C1C-B38B-B0FD8E97BF33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649F961B-A0D3-4C1C-B38B-B0FD8E97BF33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649F961B-A0D3-4C1C-B38B-B0FD8E97BF33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649F961B-A0D3-4C1C-B38B-B0FD8E97BF33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66AC8F7-45AA-493F-AFB0-D4B317879963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66AC8F7-45AA-493F-AFB0-D4B317879963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66AC8F7-45AA-493F-AFB0-D4B317879963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66AC8F7-45AA-493F-AFB0-D4B317879963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0209BD1-BA7F-4BC8-9EF3-264CE7DC5987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0209BD1-BA7F-4BC8-9EF3-264CE7DC5987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0209BD1-BA7F-4BC8-9EF3-264CE7DC5987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0209BD1-BA7F-4BC8-9EF3-264CE7DC5987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B645BED0-E1CA-498C-A795-A03A9747E2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B645BED0-E1CA-498C-A795-A03A9747E2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B645BED0-E1CA-498C-A795-A03A9747E2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B645BED0-E1CA-498C-A795-A03A9747E2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74362C64-6237-4D5A-9CF9-066D53CF8990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74362C64-6237-4D5A-9CF9-066D53CF8990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74362C64-6237-4D5A-9CF9-066D53CF8990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74362C64-6237-4D5A-9CF9-066D53CF8990}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{712F37DC-290D-4CEB-AB06-AE1D6FB7C692} = {217DD9E2-4335-408F-8CFB-B3F3F5C3AA67}
+		{649F961B-A0D3-4C1C-B38B-B0FD8E97BF33} = {DC628E77-1052-467F-B480-7616A8B22F07}
+		{F66AC8F7-45AA-493F-AFB0-D4B317879963} = {DC628E77-1052-467F-B480-7616A8B22F07}
+		{F0209BD1-BA7F-4BC8-9EF3-264CE7DC5987} = {DC628E77-1052-467F-B480-7616A8B22F07}
+		{B645BED0-E1CA-498C-A795-A03A9747E2FB} = {DC628E77-1052-467F-B480-7616A8B22F07}
+		{74362C64-6237-4D5A-9CF9-066D53CF8990} = {DC628E77-1052-467F-B480-7616A8B22F07}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = ..
+	EndGlobalSection
+EndGlobal
