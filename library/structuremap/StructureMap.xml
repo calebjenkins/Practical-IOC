@@ -124,13 +124,13 @@
             <param name="func"></param>
             <returns></returns>
         </member>
-        <member name="M:StructureMap.Configuration.DSL.Expressions.GenericFamilyExpression.InterceptConstructionWith(StructureMap.Pipeline.IBuildInterceptor)">
+        <member name="M:StructureMap.Configuration.DSL.Expressions.GenericFamilyExpression.LifecycleIs(StructureMap.Pipeline.ILifecycle)">
             <summary>
             Registers an IBuildInterceptor for this Plugin Type that executes before
             any object of this PluginType is created.  IBuildInterceptor's can be
             used to create a custom scope
             </summary>
-            <param name="interceptor"></param>
+            <param name="lifecycle"></param>
             <returns></returns>
         </member>
         <member name="M:StructureMap.Configuration.DSL.Expressions.GenericFamilyExpression.AddConcreteType(System.Type)">
@@ -377,6 +377,15 @@
             </summary>
             <typeparam name="T"></typeparam>
         </member>
+        <member name="M:StructureMap.Graph.IAssemblyScanner.ConnectImplementationsToTypesClosing(System.Type)">
+            <summary>
+            Scans for PluginType's and Concrete Types that close the given open generic type
+            </summary>
+            <example>
+            
+            </example>
+            <param name="openGenericType"></param>
+        </member>
         <member name="T:StructureMap.Interceptors.TypeInterceptor">
             <summary>
             A TypeInterceptor that is only applied if the MatchesType()
@@ -411,16 +420,6 @@
             will be intercepted
             </summary>
             <param name="interception"></param>
-        </member>
-        <member name="T:StructureMap.Pipeline.IBuildPolicy">
-            <summary>
-            An object that specifies a "Policy" about how Instance's are invoked.
-            </summary>
-        </member>
-        <member name="T:StructureMap.Pipeline.IBuildInterceptor">
-            <summary>
-            Plugin interface to create custom build or lifecycle policies for a Plugin Type
-            </summary>
         </member>
         <member name="T:StructureMap.Pipeline.ConfiguredInstance">
             <summary>
@@ -827,22 +826,13 @@
             <typeparam name="PLUGGEDTYPE"></typeparam>
             <returns></returns>
         </member>
-        <member name="M:StructureMap.Configuration.DSL.Expressions.CreatePluginFamilyExpression`1.InterceptConstructionWith(StructureMap.Pipeline.IBuildInterceptor)">
+        <member name="M:StructureMap.Configuration.DSL.Expressions.CreatePluginFamilyExpression`1.LifecycleIs(StructureMap.Pipeline.ILifecycle)">
             <summary>
-            Registers an IBuildInterceptor for this Plugin Type that executes before
-            any object of this PluginType is created.  IBuildInterceptor's can be
+            Registers an ILifecycle for this Plugin Type that executes before
+            any object of this PluginType is created.  ILifecycle's can be
             used to create a custom scope
             </summary>
-            <param name="interceptor"></param>
-            <returns></returns>
-        </member>
-        <member name="M:StructureMap.Configuration.DSL.Expressions.CreatePluginFamilyExpression`1.BuildPolicyIs(StructureMap.Pipeline.IBuildInterceptor)">
-            <summary>
-            Registers an IBuildInterceptor for this Plugin Type that executes before
-            any object of this PluginType is created.  IBuildInterceptor's can be
-            used to create a custom scope
-            </summary>
-            <param name="interceptor"></param>
+            <param name="lifecycle"></param>
             <returns></returns>
         </member>
         <member name="M:StructureMap.Configuration.DSL.Expressions.CreatePluginFamilyExpression`1.AddInstancesFrom(StructureMap.MementoSource)">
@@ -1118,6 +1108,20 @@
             </summary>
             <typeparam name="T"></typeparam>
             <param name="expression"></param>
+        </member>
+        <member name="M:StructureMap.Configuration.DSL.Registry.Register``1(``0)">
+            <summary>
+            Syntactic Sugar for saying ForRequestedType().TheDefault.IsThis( @object )
+            </summary>
+            <typeparam name="PLUGINTYPE"></typeparam>
+            <param name="object"></param>
+        </member>
+        <member name="M:StructureMap.Configuration.DSL.Registry.Register``1(StructureMap.Pipeline.Instance)">
+            <summary>
+            Syntactic Sugar for saying ForRequestedType().TheDefault.IsThis( instance )
+            </summary>
+            <typeparam name="PLUGINTYPE"></typeparam>
+            <param name="instance"></param>
         </member>
         <member name="T:StructureMap.Configuration.DSL.Registry.BuildWithExpression`1">
             <summary>
@@ -2679,7 +2683,7 @@
             </summary>
             <param name="rule"></param>
         </member>
-        <member name="T:StructureMap.Pipeline.UniquePerRequestInterceptor">
+        <member name="T:StructureMap.Pipeline.UniquePerRequestLifecycle">
             <summary>
             Makes sure that every request for this object returns a unique object
             </summary>
@@ -3212,7 +3216,7 @@
             See <see cref="T:StructureMap.Pipeline.IInstance">IInstance</see> for more information
             </summary>
         </member>
-        <member name="P:StructureMap.PluginTypeConfiguration.Policy">
+        <member name="P:StructureMap.PluginTypeConfiguration.Lifecycle">
             <summary>
             The build "policy" for this PluginType.  Used by the WhatDoIHave() diagnostics methods
             </summary>

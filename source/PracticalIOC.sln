@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_4_Decorator", "Exam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_5_Collections", "Example_5_Collections\Example_5_Collections.csproj", "{74362C64-6237-4D5A-9CF9-066D53CF8990}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_2a_BasicConfiguration", "Example_2a_BasicConfiguration\Example_2a_BasicConfiguration.csproj", "{4DC710BA-B353-4B80-AB55-9005713FB57C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{74362C64-6237-4D5A-9CF9-066D53CF8990}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74362C64-6237-4D5A-9CF9-066D53CF8990}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74362C64-6237-4D5A-9CF9-066D53CF8990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC710BA-B353-4B80-AB55-9005713FB57C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC710BA-B353-4B80-AB55-9005713FB57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC710BA-B353-4B80-AB55-9005713FB57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC710BA-B353-4B80-AB55-9005713FB57C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{F0209BD1-BA7F-4BC8-9EF3-264CE7DC5987} = {DC628E77-1052-467F-B480-7616A8B22F07}
 		{B645BED0-E1CA-498C-A795-A03A9747E2FB} = {DC628E77-1052-467F-B480-7616A8B22F07}
 		{74362C64-6237-4D5A-9CF9-066D53CF8990} = {DC628E77-1052-467F-B480-7616A8B22F07}
+		{4DC710BA-B353-4B80-AB55-9005713FB57C} = {DC628E77-1052-467F-B480-7616A8B22F07}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVNWorkingCopyRoot = ..

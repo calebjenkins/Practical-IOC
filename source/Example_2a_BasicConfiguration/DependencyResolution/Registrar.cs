@@ -1,10 +1,10 @@
 using StructureMap;
 
-namespace Example_2_IOC.DependencyResolution
+namespace Example_2a_BasicConfiguration.DependencyResolution
 {
 	public class Registrar
 	{
-		static bool _dependenciesRegistered;
+		private static bool _dependenciesRegistered;
 
 		public static void EnsureDependenciesRegistered()
 		{
@@ -12,9 +12,10 @@ namespace Example_2_IOC.DependencyResolution
 				ConfigureStructureMap();
 		}
 
-		static void ConfigureStructureMap()
+		private static void ConfigureStructureMap()
 		{
-			ObjectFactory.Initialize(x => x.AddRegistry<ExampleRegistry>());
+			ObjectFactory.Initialize(x =>
+			                         x.AddRegistry<ExampleRegistry>());
 
 			ObjectFactory.AssertConfigurationIsValid();
 
