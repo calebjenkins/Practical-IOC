@@ -41,16 +41,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\EmailSender.cs" />
-    <Compile Include="Application\IEmailSender.cs" />
-    <Compile Include="Application\Model\Workflow.cs" />
-    <Compile Include="Application\WorkflowStepper.cs" />
-    <Compile Include="Application\IWorkflowStepper.cs" />
     <Compile Include="DependencyResolution\Registrar.cs" />
     <Compile Include="DependencyResolution\ServiceLocator.cs" />
     <Compile Include="DependencyResolution\ExampleRegistry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
