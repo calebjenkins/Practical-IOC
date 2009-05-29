@@ -1,0 +1,17 @@
+ForRequestedType<IDatabaseConnection>()
+	.TheDefault.Is.OfConcreteType<OracleDatabaseConnection>()
+	.WithCtorArg("connectionString").EqualTo("Database=oracle_server");
+	
+ForRequestedType(typeof(IRepository<>))
+	.TheDefaultIsConcreteType(typeof(Repository<>));
+
+ForRequestedType<IEmailSender>()
+	.EnrichWith(x => new EmailLogger(x));
+
+ForRequestedType<IMessageFormatter>()
+	.TheDefault.Is.OfConcreteType<MessageFormatter>()
+	.TheArrayOf<IFormatRule>().Contains(x =>
+		{
+			x.OfConcreteType<ToUpperFormatRule>();
+			x.OfConcreteType<DisclaimerFormatRule>();
+		});
