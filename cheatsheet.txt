@@ -1,17 +1,21 @@
-ForRequestedType<IDatabaseConnection>()
-	.TheDefault.Is.OfConcreteType<OracleDatabaseConnection>()
-	.WithCtorArg("connectionString").EqualTo("Database=oracle_server");
-	
-ForRequestedType(typeof(IRepository<>))
-	.TheDefaultIsConcreteType(typeof(Repository<>));
+Scan(x =>
+     	{
+     		x.TheCallingAssembly();
+     		x.WithDefaultConventions();
+			x.ConnectImplementationsToTypesClosing(typeof(IHandler<>));
+     	});
 
-ForRequestedType<IEmailSender>()
-	.EnrichWith(x => new EmailLogger(x));
+For<IDatabaseConnection>()
+	.Use<OracleDatabaseConnection>()
+	.Ctor<string>().Is("Server=oracle_database");
 
-ForRequestedType<IMessageFormatter>()
-	.TheDefault.Is.OfConcreteType<MessageFormatter>()
-	.TheArrayOf<IFormatRule>().Contains(x =>
-		{
-			x.OfConcreteType<ToUpperFormatRule>();
-			x.OfConcreteType<DisclaimerFormatRule>();
-		});
+For<IEmailSender>().EnrichWith(sender => new EmailLogger(sender));
+
+For<IMessageFormatter>()
+	.Use<MessageFormatter>()
+	.EnumerableOf<IFormatRule>()
+	.Contains(x =>
+	          	{
+	          		x.Type<UpperCaseRule>();
+	          		x.Type<DisclaimerRule>();
+	          	});
