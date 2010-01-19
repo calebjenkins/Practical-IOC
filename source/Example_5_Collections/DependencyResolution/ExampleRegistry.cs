@@ -13,18 +13,16 @@ namespace Example_5_Collections.DependencyResolution
 					x.WithDefaultConventions();
 				});
 
-			ForRequestedType(typeof(IRepository<>))
-				.TheDefaultIsConcreteType(typeof(Repository<>));
+			For(typeof(IRepository<>)).Use(typeof(Repository<>));
 
-			ForRequestedType<IEmailSender>()
-				.EnrichWith(x => new EmailLogger(x));
+			For<IEmailSender>().EnrichWith(x => new EmailLogger(x));
 
-			ForRequestedType<IMessageFormatter>()
-				.TheDefault.Is.OfConcreteType<MessageFormatter>()
-				.TheArrayOf<IFormatRule>().Contains(x =>
+			For<IMessageFormatter>()
+				.Use<MessageFormatter>()
+				.EnumerableOf<IFormatRule>().Contains(x =>
 					{
-						x.OfConcreteType<ToUpperFormatRule>();
-						x.OfConcreteType<DisclaimerFormatRule>();
+						x.Type<ToUpperFormatRule>();
+						x.Type<DisclaimerFormatRule>();
 					});
 		}
 	}

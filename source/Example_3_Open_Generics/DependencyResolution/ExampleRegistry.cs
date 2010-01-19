@@ -13,8 +13,7 @@ namespace Example_3_Open_Generics.DependencyResolution
 					x.WithDefaultConventions();
 				});
 
-			ForRequestedType(typeof(IRepository<>))
-				.TheDefaultIsConcreteType(typeof(Repository<>));
+			For(typeof(IRepository<>)).Use(typeof(Repository<>));
 		}
 	}
 }

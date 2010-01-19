@@ -13,11 +13,9 @@ namespace Example_4_Decorator.DependencyResolution
 					x.WithDefaultConventions();
 				});
 
-			ForRequestedType(typeof(IRepository<>))
-				.TheDefaultIsConcreteType(typeof(Repository<>));
+			For(typeof(IRepository<>)).Use(typeof(Repository<>));
 
-			ForRequestedType<IEmailSender>()
-				.EnrichWith(x => new EmailLogger(x));
+			For<IEmailSender>().EnrichWith(x => new EmailLogger(x));
 		}
 	}
 }

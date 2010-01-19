@@ -13,9 +13,9 @@ namespace Example_2a_BasicConfiguration.DependencyResolution
 			     	x.WithDefaultConventions();
 			     });
 
-			ForRequestedType<IDatabaseConnection>()
-				.TheDefault.Is.OfConcreteType<OracleDatabaseConnection>()
-				.WithCtorArg("connectionString").EqualTo("Database=oracle_server");
+			For<IDatabaseConnection>()
+				.Use<OracleDatabaseConnection>()
+				.Ctor<string>().Is("Database=oracle_server");
 		}
 	}
 }

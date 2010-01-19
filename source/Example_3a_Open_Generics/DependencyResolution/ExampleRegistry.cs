@@ -14,9 +14,9 @@ namespace Example_3a_Open_Generics.DependencyResolution
 						x.ConnectImplementationsToTypesClosing(typeof(IMessageHandler<>));
 			     	});
 
-			ForRequestedType<IDatabaseConnection>()
-				.TheDefault.Is.OfConcreteType<OracleDatabaseConnection>()
-				.WithCtorArg("connectionString").EqualTo("Database=oracle_server");
+			For<IDatabaseConnection>().
+				Use<OracleDatabaseConnection>()
+				.Ctor<string>().Is("Database=oracle_server");
 		}
 	}
 }
