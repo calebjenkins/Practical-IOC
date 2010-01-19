@@ -17,8 +17,6 @@ namespace Example.DependencyResolution
 			ObjectFactory.Initialize(x => 
 				x.AddRegistry<ExampleRegistry>());
 
-			// ObjectFactory.AssertConfigurationIsValid();
-			
 			_dependenciesRegistered = true;
 		}
 	}
