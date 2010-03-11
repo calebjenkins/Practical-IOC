@@ -7,10 +7,10 @@ namespace Example.DependencyResolution
 		public ExampleRegistry()
 		{
 			Scan(x =>
-				{
-					x.TheCallingAssembly();
-					x.WithDefaultConventions();
-				});
+			     	{
+			     		x.TheCallingAssembly();
+			     		x.WithDefaultConventions();
+			     	});
 		}
 	}
 }
