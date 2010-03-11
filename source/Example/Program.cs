@@ -2,8 +2,9 @@
 {
 	internal class Program
 	{
-		private static void Main()
+		static void Main()
 		{
+
 		}
 	}
 }
