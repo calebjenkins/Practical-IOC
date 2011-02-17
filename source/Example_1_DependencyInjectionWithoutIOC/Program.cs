@@ -2,14 +2,14 @@
 
 namespace Example_1_DependencyInjectionWithoutIOC
 {
-	internal class Program
-	{
-		private static void Main()
-		{
-			var emailSender = new EmailSender();
-			var stepper = new WorkflowStepper(emailSender);
+  internal class Program
+  {
+    static void Main()
+    {
+      var emailSender = new EmailSender();
+      var stepper = new WorkflowStepper(emailSender);
 
-			stepper.Step();
-		}
-	}
+      stepper.Step();
+    }
+  }
 }

@@ -1,11 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{217DD9E2-4335-408F-8CFB-B3F3F5C3AA67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{712F37DC-290D-4CEB-AB06-AE1D6FB7C692}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stages", "Stages", "{DC628E77-1052-467F-B480-7616A8B22F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{712F37DC-290D-4CEB-AB06-AE1D6FB7C692}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example_1_DependencyInjectionWithoutIOC", "Example_1_DependencyInjectionWithoutIOC\Example_1_DependencyInjectionWithoutIOC.csproj", "{649F961B-A0D3-4C1C-B38B-B0FD8E97BF33}"
 EndProject

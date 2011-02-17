@@ -15,7 +15,7 @@ namespace Example_4_Decorator.DependencyResolution
 
 			For(typeof(IRepository<>)).Use(typeof(Repository<>));
 
-			For<IEmailSender>().EnrichWith(x => new EmailLogger(x));
+			For<IEmailSender>().EnrichAllWith(x => new EmailLogger(x));
 		}
 	}
 }
